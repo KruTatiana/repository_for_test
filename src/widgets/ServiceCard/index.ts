@@ -1,0 +1,1 @@
+export { ServiseCard } from "./ServiceCard";
