@@ -1,4 +1,6 @@
 import type { Service } from "../../mock-data/types";
+import { Button } from "../../shared/Button";
+
 import styles from "./ServiceCard.module.scss";
 
 export const ServiseCard = ({ title, price }: Service) => {
@@ -6,7 +8,7 @@ export const ServiseCard = ({ title, price }: Service) => {
     <div className={styles.serviceCardContainer}>
       <h3>{title}</h3>
       <p>{price}</p>
-      <button>Добавить</button>
+      <Button texst="Добавить" />
     </div>
   );
 };
