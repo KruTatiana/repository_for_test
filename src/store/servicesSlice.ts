@@ -8,7 +8,12 @@ const serviceSlice = createSlice({
   initialState: [] as Service[],
   reducers: {
     addService: (state, action: PayloadAction<Service>) => {
-      state.push(action.payload);
+      const existingService = state.find(
+        (service) => service.id === action.payload.id
+      );
+      if (!existingService) {
+        state.push(action.payload);
+      }
     },
   },
 });

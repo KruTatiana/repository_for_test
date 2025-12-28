@@ -4,11 +4,12 @@ import styles from "./Button.module.scss";
 
 interface ButtonTypes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
+  isAdd?: boolean;
 }
 
-export const Button = ({ onClick, text }: ButtonTypes) => {
+export const Button = ({ onClick, text, isAdd }: ButtonTypes) => {
   return (
-    <button onClick={onClick} className={styles.button}>
+    <button disabled={isAdd} onClick={onClick} className={styles.button}>
       {text}
     </button>
   );
