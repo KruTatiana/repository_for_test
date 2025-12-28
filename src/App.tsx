@@ -1,21 +1,14 @@
-import "./App.css";
-import { ServiсeCard } from "./widgets/ServiceCard";
-import { Result } from "./widgets/Result/Result";
-import { ServiceData } from "./mock-data/data";
+import { Result } from "./widgets";
+import { Serviсes } from "./features";
+
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <>
-      {ServiceData.map((service) => (
-        <ServiсeCard
-          key={service.id}
-          id={service.id}
-          title={service.title}
-          price={service.price}
-        />
-      ))}
+    <div className={styles.container}>
+      <Serviсes />
       <Result />
-    </>
+    </div>
   );
 }
 
